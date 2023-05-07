@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2.9</title>
+</head>
+<body>
+    <h1>Task 9</h1>
+    <div id="array"></div>
+    <div id="result"></div>
+</body>
+<script>
+    const people = [
+        { name: 'Bob', height: 175 },
+        { name: 'Emma', height: 160 },
+        { name: 'John', height: 180 },
+        { name: 'Alice', height: 165 },
+    ];
+
+    function sortByName(arr) {
+        arr.sort(function(a, b) {
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+    }
+
+    function sortByHeight(arr, asc = true) {
+        arr.sort(function(a, b) {
+            if (asc) {
+                return a.height - b.height;
+            } else {
+                return b.height - a.height;
+            }
+        });
+    }
+
+    const arrayElement = document.getElementById('array');
+    arrayElement.innerHTML = '<h2>Original Array:</h2>' + JSON.stringify(people);
+
+    sortByHeight(people);
+
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = '<h2>Sorted Result:</h2>' + JSON.stringify(people);
+</script>
+</html>

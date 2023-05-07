@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 3.9</title>
+</head>
+<body>
+    <h1>Task 9</h1>
+    <p>Window will close in <span id="countdown"></span> seconds.</p>
+</body>
+<script>
+    function closeWindow() {
+        window.close();
+    }
+
+    function countdownTimer() {
+        let countdown = 60;
+
+        function updateCountdown() {
+            document.getElementById('countdown').textContent = String(countdown);
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(timerId);
+                closeWindow();
+            }
+        }
+
+        updateCountdown();
+
+        const timerId = setInterval(updateCountdown, 1000);
+    }
+
+    window.addEventListener('load', countdownTimer);
+</script>
+</html>

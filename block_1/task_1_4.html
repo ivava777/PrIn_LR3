@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 1.4</title>
+    <style>
+        p {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 4</h1>
+    <p>Time: <span id="clock"></span></p>
+</body>
+<script>
+    function displayTime() {
+        const date = new Date();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+
+        const time = `${hours}:${minutes}:${seconds}`;
+
+        document.getElementById('clock').textContent = time;
+    }
+
+    setInterval(displayTime, 1000);
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2.4</title>
+</head>
+<body>
+    <h1>Task 4</h1>
+    <div id="output"></div>
+</body>
+<script>
+    const outputElement = document.getElementById('output');
+
+    function handleMouseMove(event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        outputElement.textContent = 'Mouse coordinates: X=' + mouseX + ', Y=' + mouseY;
+    }
+
+    function handleKeyPress(event) {
+        var keyCode = event.keyCode || event.which;
+        outputElement.textContent = 'Key pressed: ' + keyCode;
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('keydown', handleKeyPress);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 1.1</title>
+</head>
+<body>
+    <h1>Task 1</h1>
+    <p>
+        <input type="text" id="text-input" placeholder="Enter text">
+        <input type="number" id="font-size-input" placeholder="Enter font size">
+        <button onclick="printTextWithFontSize()">Generate</button>
+    </p>
+    <p id="output"></p>
+
+</body>
+<script>
+    function printTextWithFontSize() {
+        const text = document.getElementById('text-input').value;
+        const fontSize = document.getElementById('font-size-input').value;
+
+        const outputElement = document.getElementById('output');
+        outputElement.style.fontSize = fontSize + 'px';
+        outputElement.textContent = text;
+    }
+</script>
+</html>

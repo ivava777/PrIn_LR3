@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2.3</title>
+    <style>
+        .color-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .color-list li {
+            margin-bottom: 5px;
+        }
+
+        .color-square {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 3</h1>
+    <ul class="color-list">
+        <li><button onclick="changeColor('red')">Red</button></li>
+        <li><button onclick="changeColor('green')">Green</button></li>
+        <li><button onclick="changeColor('blue')">Blue</button></li>
+        <li><button onclick="changeColor('yellow')">Yellow</button></li>
+        <li><button onclick="changeColor('orange')">Orange</button></li>
+    </ul>
+    <div id="color-square" class="color-square"></div>
+</body>
+<script>
+    function changeColor(color) {
+        const colorSquare = document.getElementById('color-square');
+        colorSquare.style.backgroundColor = color;
+    }
+</script>
+</html>
